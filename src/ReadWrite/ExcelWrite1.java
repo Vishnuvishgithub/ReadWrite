@@ -2,6 +2,7 @@ package ReadWrite;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 
 import org.apache.poi.ss.usermodel.Cell;
@@ -24,7 +25,11 @@ public class ExcelWrite1 {
 		System.out.println(lastrow);
 		
 		
+		FileOutputStream fos=new FileOutputStream("C:\\\\Excelsheet\\\\Testing.xlsx");
+		workbook.write(fos);
 		
+		fos.close();
+		workbook.close();
 		
 		
 	}
